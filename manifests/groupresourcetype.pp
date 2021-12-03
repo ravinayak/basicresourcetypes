@@ -4,7 +4,7 @@ class basicresourcetypes::groupresourcetype {
   user{$users:
     ensure         => present,
     comment        => 'this is a test user for testing groups',
-    uid            => [5050, 5051, 5052],
+    #uid            => [5050, 5051, 5052],
     allowdupe      => false,
     membership     => minimum,
     purge_ssh_keys => true,
