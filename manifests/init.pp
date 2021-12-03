@@ -1,5 +1,4 @@
-include stdlib
-class init{
+class basicresourcetypes{
   include 'basicresourcetypes::directorycreationfileresourcetype'
   include 'basicresourcetypes::packageresourcetype'
   include 'basicresourcetypes::execresourcetype'
