@@ -37,4 +37,3 @@ class basicresourcetypes::groupresourcetype {
     system          => false,
   }
 }
-include basicresourcetypes::groupresourcetype
