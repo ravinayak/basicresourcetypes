@@ -1,5 +1,4 @@
-include stdlib
-class packageresourcetype(){
+class basicresourcetypes::packageresourcetype {
   package{'tmux':
     ensure => installed,
   }

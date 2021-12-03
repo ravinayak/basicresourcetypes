@@ -1,5 +1,4 @@
-include stdlib
-class basicresourcetypes::fileresourcetype{
+class basicresourcetypes::fileresourcetype {
   $path_pl_repo = '/etc/puppetlabs/code/environments/production/puppet-learning/manifests'
   file {'soure file':
     path    => "${path_pl_repo}/source_file",

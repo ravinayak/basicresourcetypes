@@ -1,5 +1,4 @@
-include stdlib
-class basicresourcetypes::execresourcetype(){
+class basicresourcetypes::execresourcetype {
   exec{'command to update respositories':
     command   => 'apt-get update -y',
     path      => ['/usr/bin', '/usr/local/sbin', '/usr/local/bin'],

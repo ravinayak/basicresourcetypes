@@ -1,5 +1,4 @@
-include stdlib
-class basicresourcetypes::directorycreationfileresourcetype(){
+class basicresourcetypes::directorycreationfileresourcetype {
   $parent_dir_path = 'testA/testB/testC/testD'
   user{ 'bob':
     name       => 'bob',
