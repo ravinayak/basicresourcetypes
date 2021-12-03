@@ -1,9 +1,10 @@
 class basicresourcetypes::groupresourcetype {
   $users=['tom', 'dick', 'harry']
+  $value=1050
   user{$users:
     ensure         => present,
     comment        => 'this is a test user for testing groups',
-    uid            => fqdn_rand(1001,1050, 'seed string'),
+    uid            => [1050, 1051, 1052],
     allowdupe      => false,
     membership     => minimum,
     purge_ssh_keys => true,
