@@ -37,5 +37,19 @@ class basicresourcetypes::groupresourcetype(
       system    => false,
     }
     $names_arr = $users.reduce([]) |$result, $user_hash| { $result << $user_hash['name'] }
+    $group_name_hash = $users.reduce({}) |$result, $user_hash| { $result.merge($user_hash['name'] => $user_hash['gid']) }
+    $file_ensure = $ensure_val ? {
+      true    => directory,
+      false   => absent,
+      default => directory,
+    }
+    $names_arr.each |$name| {
+      file { "/home/${name}":
+        ensure => $file_ensure,
+        owner  => $name,
+        group  => $group_name_hash[$name],
+        mode   => '0755'
+      }
+    }
     Group['group1', 'group2', 'group3'] ~> User[$names_arr]
 }
