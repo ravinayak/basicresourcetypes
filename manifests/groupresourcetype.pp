@@ -3,7 +3,7 @@ class basicresourcetypes::groupresourcetype(
 ) {
     $users.each |$user_hash| {
       user { $user_hash['name']:
-        ensure         => absent,
+        ensure         => present,
         comment        => "Test user :: ${user_hash['name']}",
         uid            => $user_hash['uid'],
         allowdupe      => false,
@@ -14,7 +14,7 @@ class basicresourcetypes::groupresourcetype(
       }
     }
     group { 'group1 - members - [test-user-1, test-user-2]':
-      ensure    => absent,
+      ensure    => present,
       name      => 'group1',
       gid       => 1015,
       allowdupe => false,
@@ -22,14 +22,14 @@ class basicresourcetypes::groupresourcetype(
       system    => false,
     }
     group { 'group2 - members - [test-user-2, test-user-3]':
-      ensure    => absent,
+      ensure    => present,
       name      => 'group2',
       gid       => 1016,
       allowdupe => false,
       system    => false,
     }
     group { 'group3 - members - [test-user-3, test-user-1]':
-      ensure    => absent,
+      ensure    => present,
       name      => 'group3',
       gid       => 1017,
       allowdupe => false,
