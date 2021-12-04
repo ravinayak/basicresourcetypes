@@ -4,7 +4,7 @@ class basicresourcetypes::groupresourcetype {
   user{$users:
     ensure         => absent,
     comment        => 'this is a test user for testing groups',
-    #uid            => [5050, 5051, 5052],
+    uid            => [5050, 5051, 5052],
     allowdupe      => false,
     membership     => minimum,
     purge_ssh_keys => true,
@@ -18,6 +18,7 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['tom', 'dick'],
     system          => false,
+    after           => User[$users],
   }
   group { 'group2 creation - members - [dick, harry]':
     ensure          => absent,
@@ -27,6 +28,7 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['dick','harry'],
     system          => false,
+    after           => User[$users],
   }
   group { 'group3 creation - members - [harry,tom]':
     ensure          => absent,
@@ -36,5 +38,6 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['harry', 'tom'],
     system          => false,
+    after           => User[$users],
   }
 }
