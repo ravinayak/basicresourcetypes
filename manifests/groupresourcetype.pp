@@ -3,7 +3,7 @@ class basicresourcetypes::groupresourcetype(
 ) {
     $users.each |$user_hash| {
       user { $user_hash['name']:
-        ensure         => present,
+        ensure         => $user_hash['ensure'],
         comment        => "TestUser-${user_hash['name']}",
         uid            => $user_hash['uid'],
         allowdupe      => false,
