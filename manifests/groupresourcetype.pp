@@ -1,9 +1,10 @@
 class basicresourcetypes::groupresourcetype(
+  String $ensure_val,
   Array[Hash[String, Variant[String, Integer]]] $users,
 ) {
     $users.each |$user_hash| {
       user { $user_hash['name']:
-        ensure         => $user_hash['ensure'],
+        ensure         => $ensure_val,
         comment        => "TestUser-${user_hash['name']}",
         uid            => $user_hash['uid'],
         allowdupe      => false,
@@ -14,7 +15,7 @@ class basicresourcetypes::groupresourcetype(
       }
     }
     group { 'group1':
-      ensure    => present,
+      ensure    => $ensure_val,
       name      => 'group1-test',
       gid       => 1020,
       allowdupe => false,
@@ -22,14 +23,14 @@ class basicresourcetypes::groupresourcetype(
       system    => false,
     }
     group { 'group2':
-      ensure    => present,
+      ensure    => $ensure_val,
       name      => 'group2-test',
       gid       => 1021,
       allowdupe => false,
       system    => false,
     }
     group { 'group3':
-      ensure    => present,
+      ensure    => $ensure_val,
       name      => 'group3-test',
       gid       => 1022,
       allowdupe => false,
