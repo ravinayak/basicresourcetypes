@@ -37,26 +37,3 @@ class basicresourcetypes::groupresourcetype(
     }
     Group['group1', 'group2', 'group3'] ~> User['test-user-1', 'test-user-2', 'test-user-3']
 }
-
-Class { 'basicresourcetypes::groupresourcetype':
-  users => [
-    {
-      name   => 'test-user-1',
-      uid    => 3001,
-      groups => 'group3',
-      gid    => 1015,
-    },
-        {
-      name   => 'test-user-2',
-      uid    => 3001,
-      groups => 'group1',
-      gid    => 1016
-    },
-        {
-      name   => 'test-user-3',
-      uid    => 3001,
-      groups => 'group2',
-      gid    => 1017
-    }
-  ]
-}
