@@ -10,7 +10,7 @@ class basicresourcetypes::groupresourcetype {
     purge_ssh_keys => true,
     shell          => '/bin/bash',
   }
-  group{ 'group1 creation - members - [tom, dick]':
+  group{ 'group1- members - [tom, dick]':
     ensure          => present,
     name            => 'group1',
     gid             => 1015,
@@ -18,9 +18,8 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['tom', 'dick'],
     system          => false,
-    after           => User[$users],
   }
-  group { 'group2 creation - members - [dick, harry]':
+  group { 'group2 - members - [dick, harry]':
     ensure          => present,
     name            => 'group2',
     gid             => 1016,
@@ -28,9 +27,8 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['dick','harry'],
     system          => false,
-    after           => User[$users],
   }
-  group { 'group3 creation - members - [harry,tom]':
+  group { 'group3 - members - [harry,tom]':
     ensure          => present,
     name            => 'group3',
     gid             => 1017,
@@ -38,6 +36,6 @@ class basicresourcetypes::groupresourcetype {
     auth_membership => false,
     members         => ['harry', 'tom'],
     system          => false,
-    after           => User[$users],
   }
+  User[$users] ~> [Group['group1 - members - [tom, dick]'], Group['group2 - members - [dick, harry]'], Group['group3 - members - [harry,tom]']]
 }
