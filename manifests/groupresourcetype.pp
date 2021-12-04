@@ -13,24 +13,24 @@ class basicresourcetypes::groupresourcetype(
         shell          => '/bin/bash',
       }
     }
-    group { 'group1 - members - [test-user-1, test-user-2]':
+    group { 'group1':
       ensure    => present,
-      name      => 'group1',
+      name      => 'group1 - members - [test-user-1, test-user-2]',
       gid       => 1015,
       allowdupe => false,
       #members   => ['tom', 'dick'],
       system    => false,
     }
-    group { 'group2 - members - [test-user-2, test-user-3]':
+    group { 'group2':
       ensure    => present,
-      name      => 'group2',
+      name      => 'group2 - members - [test-user-2, test-user-3]',
       gid       => 1016,
       allowdupe => false,
       system    => false,
     }
-    group { 'group3 - members - [test-user-3, test-user-1]':
+    group { 'group3':
       ensure    => present,
-      name      => 'group3',
+      name      => 'group3 - members - [test-user-3, test-user-1]',
       gid       => 1017,
       allowdupe => false,
       system    => false,
