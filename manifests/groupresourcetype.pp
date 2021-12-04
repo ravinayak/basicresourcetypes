@@ -10,7 +10,7 @@ class basicresourcetypes::groupresourcetype {
     purge_ssh_keys => true,
     shell          => '/bin/bash',
   }
-  group{ 'group1- members - [tom, dick]':
+  group{ 'group1 - members - [tom, dick]':
     ensure          => present,
     name            => 'group1',
     gid             => 1015,
