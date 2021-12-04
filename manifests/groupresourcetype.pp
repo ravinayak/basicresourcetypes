@@ -39,8 +39,8 @@ class basicresourcetypes::groupresourcetype(
     $names_arr = $users.reduce([]) |$result, $user_hash| { $result << $user_hash['name'] }
     $group_name_hash = $users.reduce({}) |$result, $user_hash| { $result.merge($user_hash['name'] => $user_hash['gid']) }
     $file_ensure = $ensure_val ? {
-      true    => directory,
-      false   => absent,
+      present => directory,
+      absent  => absent,
       default => directory,
     }
     $names_arr.each |$name| {
