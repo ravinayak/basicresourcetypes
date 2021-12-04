@@ -4,7 +4,7 @@ class basicresourcetypes::groupresourcetype(
     $users.each |$user_hash| {
       user { $user_hash['name']:
         ensure         => present,
-        comment        => "Test user :: ${user_hash['name']}",
+        comment        => "TestUser-${user_hash['name']}",
         uid            => $user_hash['uid'],
         allowdupe      => false,
         membership     => minimum,
