@@ -35,5 +35,6 @@ class basicresourcetypes::groupresourcetype(
       allowdupe => false,
       system    => false,
     }
-    Group['group1', 'group2', 'group3'] ~> User['test-user-1', 'test-user-2', 'test-user-3']
+    $names_arr = $users.reduce([]) |$result, $user_hash| { $result << $user_hash['name'] }
+    Group['group1', 'group2', 'group3'] ~> User[$names_arr]
 }
