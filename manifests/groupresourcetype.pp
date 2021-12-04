@@ -15,7 +15,7 @@ class basicresourcetypes::groupresourcetype(
     }
     group { 'group1':
       ensure    => present,
-      name      => 'group1 - members - [test-user-1, test-user-2]',
+      name      => 'group1-test',
       gid       => 1015,
       allowdupe => false,
       #members   => ['tom', 'dick'],
@@ -23,14 +23,14 @@ class basicresourcetypes::groupresourcetype(
     }
     group { 'group2':
       ensure    => present,
-      name      => 'group2 - members - [test-user-2, test-user-3]',
+      name      => 'group2-test',
       gid       => 1016,
       allowdupe => false,
       system    => false,
     }
     group { 'group3':
       ensure    => present,
-      name      => 'group3 - members - [test-user-3, test-user-1]',
+      name      => 'group3-test',
       gid       => 1017,
       allowdupe => false,
       system    => false,
