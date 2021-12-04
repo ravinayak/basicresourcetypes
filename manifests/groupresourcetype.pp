@@ -2,7 +2,7 @@ class basicresourcetypes::groupresourcetype {
   $users=['tom', 'dick', 'harry']
   $value=1050
   user{$users:
-    ensure         => present,
+    ensure         => absent,
     comment        => 'this is a test user for testing groups',
     #uid            => [5050, 5051, 5052],
     allowdupe      => false,
@@ -11,7 +11,7 @@ class basicresourcetypes::groupresourcetype {
     shell          => '/bin/bash',
   }
   group{ 'group1 creation - members - [tom, dick]':
-    ensure          => present,
+    ensure          => absent,
     name            => 'group1',
     gid             => 1015,
     allowdupe       => false,
@@ -20,7 +20,7 @@ class basicresourcetypes::groupresourcetype {
     system          => false,
   }
   group { 'group2 creation - members - [dick, harry]':
-    ensure          => present,
+    ensure          => absent,
     name            => 'group2',
     gid             => 1016,
     allowdupe       => false,
@@ -29,7 +29,7 @@ class basicresourcetypes::groupresourcetype {
     system          => false,
   }
   group { 'group3 creation - members - [harry,tom]':
-    ensure          => present,
+    ensure          => absent,
     name            => 'group3',
     gid             => 1017,
     allowdupe       => false,
