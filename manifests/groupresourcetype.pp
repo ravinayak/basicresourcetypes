@@ -47,6 +47,7 @@ class basicresourcetypes::groupresourcetype(
       file { "/home/${name}":
         ensure => $file_ensure,
         owner  => $name,
+        force  => true,
         group  => $group_name_hash[$name],
         mode   => '0755'
       }
