@@ -25,15 +25,15 @@ class basicresourcetypes::fileresourcetype {
     group  => 'vagrant',
     source => "${path_pl_repo}/source_file",
   }
-  file {'copy of tmux keyboard bindings':
-    ensure    => absent,
-    path      => '/home/bob/tmux-keyboard-bindings.conf',
-    source    => '/usr/share/byobu/keybindings/tmux-screen-keys.conf',
-    mode      => '0644',
-    owner     => 'vagrant',
-    group     => 'vagrant',
-    show_diff => true,
-  }
+  # file {'copy of tmux keyboard bindings':
+  #   ensure    => absent,
+  #   path      => '/home/bob/tmux-keyboard-bindings.conf',
+  #   source    => '/usr/share/byobu/keybindings/tmux-screen-keys.conf',
+  #   mode      => '0644',
+  #   owner     => 'vagrant',
+  #   group     => 'vagrant',
+  #   show_diff => true,
+  # }
   file{'symbolic link example':
     ensure => link,
     target => '/etc/puppetlabs/code/environments/production/puppet-learning/manifests',
