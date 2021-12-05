@@ -6,7 +6,7 @@ class basicresourcetypes::resourcesresourcetype{
     }
     user { 'managed-by-puppet':
       ensure => present,
-      uid    => 1001,
+      uid    => 45001,
       gid    => 25001,
     }
     resources { 'user-management':
