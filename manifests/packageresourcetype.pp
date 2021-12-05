@@ -7,7 +7,7 @@ class basicresourcetypes::packageresourcetype(
       path    => ['/usr/bin', '/usr/local/sbin', '/usr/local/bin'],
       cwd     => '/etc/puppetlabs/code/environments/production/',
     }
-    package{'tmux':
+    package{'vim':
       ensure               => $ensure_installed,
       reinstall_on_refresh => true,
       configfiles          => keep,
@@ -21,7 +21,7 @@ class basicresourcetypes::packageresourcetype(
       ensure               =>  $ensure_installed, # >2.3.0 <2.6.0 #'2.4.41-4ubuntu3.8',
       reinstall_on_refresh => true,
     }
-    Exec['ls-send-refresh-event'] ~> Package['tmux', 'apache2', 'wget']
+    Exec['ls-send-refresh-event'] ~> Package['vim', 'apache2', 'wget']
     # resinstall_on_refresh does not seem to work correctly, configfiles should always be backed up before doing any upgrade
     # actually thw whole box should be, so we can revert it if needed, Individual backups are not very efficient in such cases
 
