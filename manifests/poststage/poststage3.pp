@@ -6,6 +6,5 @@ class basicresourcetypes::poststage::poststage3 {
     group   => 'root',
     mode    => '0644',
     content => 'Post-Stage-3',
-    stage   => 'post-stage',
   }
 }

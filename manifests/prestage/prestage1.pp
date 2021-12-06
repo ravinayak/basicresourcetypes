@@ -6,6 +6,5 @@ class basicresourcetypes::prestage::prestage1 {
     group   => 'root',
     mode    => '0644',
     content => 'Pre-Stage-1',
-    stage   => 'pre-stage',
   }
 }
