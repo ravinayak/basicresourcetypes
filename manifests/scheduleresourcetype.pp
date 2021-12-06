@@ -27,7 +27,7 @@ class basicresourcetypes::scheduleresourcetype(
     group    => 'vagrant',
     schedule => 'hourly-60-times-schedule',
   }
-  schedule { 'apply-to-scheduled-random-file':
+  schedule { 'hourly-60-times-schedule':
     name        => 'monday-4am-6am-file-copy',
     period      => 'hourly',
     repeat      => 60,
