@@ -4,6 +4,8 @@ class basicresourcetypes::stageresourcetype(
   stage { 'pre-stage':
     before => Stage['main'],
   }
+  stage { 'post-stage':}
+
   Stage['Main'] -> Stage['post-stage']
 
   if $stage_demo {
