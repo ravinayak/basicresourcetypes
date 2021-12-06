@@ -1,4 +1,6 @@
-class basicresourcetypes::scheduleresourcetype {
+class basicresourcetypes::scheduleresourcetype(
+  String $schedule_range,
+) {
   schedule { 'maintenance-window':
     name    => 'weekly-nighttime-maintenance',
     period  => 'weekly',
@@ -29,7 +31,7 @@ class basicresourcetypes::scheduleresourcetype {
     name        => 'monday-4am-6am-file-copy',
     period      => 'weekly',
     repeat      => 2,
-    range       => '23:50-23:54',
+    range       => $schedule_range,
     weekday     => 'Monday',
     periodmatch => 'distance'
   }
