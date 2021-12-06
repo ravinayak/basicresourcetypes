@@ -25,7 +25,7 @@ class basicresourcetypes::scheduleresourcetype(
     mode     => '0644',
     owner    => 'vagrant',
     group    => 'vagrant',
-    schedule => 'monday-4am-6am-file-copy',
+    #schedule => 'monday-4am-6am-file-copy',
   }
   schedule { 'apply-to-scheduled-random-file':
     name        => 'monday-4am-6am-file-copy',
