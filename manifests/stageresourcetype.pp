@@ -18,17 +18,17 @@ class basicresourcetypes::stageresourcetype(
     Class { 'basicresourcetypes::prestage::prestage3':
       stage => 'pre-stage'
     }
-    Class {'basicresourcetypes::prestage::poststage1':
+    Class {'basicresourcetypes::poststage::poststage1':
       stage => 'post-stage',
     }
-    Class {'basicresourcetypes::prestage::poststage2':
+    Class {'basicresourcetypes::poststage::poststage2':
       stage => 'post-stage',
     }
-    Class {'basicresourcetypes::prestage::poststage3':
+    Class {'basicresourcetypes::poststage::poststage3':
       stage => 'post-stage',
     }
-    include basicresourcetypes::prestage::defaultmainstage1
-    include basicresourcetypes::prestage::defaultmainstage2
+    include basicresourcetypes::defaultmainstage::defaultmainstage1
+    include basicresourcetypes::defaultmainstage::defaultmainstage2
   }
 
 
