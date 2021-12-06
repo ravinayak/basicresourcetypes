@@ -33,7 +33,7 @@ class basicresourcetypes::scheduleresourcetype(
     repeat      => 2,
     range       => $schedule_range,
     weekday     => 'Monday',
-    periodmatch => 'number'
+    #periodmatch => 'distance'
   }
   exec { '/usr/bin/ls /etc/puppetlabs/code/environments/production/puppet-learning/':
     schedule => 'apply-to-scheduled-random-file'
