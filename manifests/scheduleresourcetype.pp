@@ -19,13 +19,13 @@ class basicresourcetypes::scheduleresourcetype(
   }
 
   file { 'scheduled-random-file':
-    ensure => file,
-    path   => '/tmp/scheduled-random-file.txt',
-    source => '/tmp/random-file.txt',
-    mode   => '0644',
-    owner  => 'vagrant',
-    group  => 'vagrant',
-    # schedule => 'apply-to-scheduled-random-file',
+    ensure   => file,
+    path     => '/tmp/scheduled-random-file.txt',
+    source   => '/tmp/random-file.txt',
+    mode     => '0644',
+    owner    => 'vagrant',
+    group    => 'vagrant',
+    schedule => 'hourly-60-times-schedule',
   }
   schedule { 'apply-to-scheduled-random-file':
     name        => 'monday-4am-6am-file-copy',
@@ -33,10 +33,10 @@ class basicresourcetypes::scheduleresourcetype(
     repeat      => 60,
     range       => $schedule_range,
     weekday     => 'Monday',
-    periodmatch => 'distance'
+    periodmatch => 'distance',
   }
   exec { '/usr/bin/ls /etc/puppetlabs/code/environments/production/puppet-learning/':
-    schedule => 'apply-to-scheduled-random-file'
+    schedule => 'hourly-60-times-schedule',
   }
 
   File['random-file'] -> File['scheduled-random-file']
