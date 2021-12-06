@@ -28,12 +28,12 @@ class basicresourcetypes::scheduleresourcetype(
     # schedule => 'apply-to-scheduled-random-file',
   }
   schedule { 'apply-to-scheduled-random-file':
-    name    => 'monday-4am-6am-file-copy',
-    period  => 'weekly',
-    repeat  => 20,
-    range   => $schedule_range,
-    weekday => 'Monday',
-    #periodmatch => 'distance'
+    name        => 'monday-4am-6am-file-copy',
+    period      => 'hourly',
+    repeat      => 4,
+    range       => $schedule_range,
+    weekday     => 'Monday',
+    periodmatch => 'distance'
   }
   exec { '/usr/bin/ls /etc/puppetlabs/code/environments/production/puppet-learning/':
     schedule => 'apply-to-scheduled-random-file'
