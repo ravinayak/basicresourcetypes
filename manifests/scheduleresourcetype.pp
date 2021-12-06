@@ -35,5 +35,5 @@ class basicresourcetypes::scheduleresourcetype(
     weekday     => 'Monday',
     periodmatch => 'distance'
   }
-  Schedule['apply-to-scheduled-random-file'] -> File['random-file'] -> File['scheduled-random-file']
+  File['random-file'] -> File['scheduled-random-file']
 }
