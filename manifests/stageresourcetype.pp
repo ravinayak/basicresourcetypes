@@ -27,8 +27,8 @@ class basicresourcetypes::stageresourcetype(
     Class {'basicresourcetypes::poststage::poststage3':
       stage => 'post-stage',
     }
-    include basicresourcetypes::defaultmainstage::defaultmainstage1
-    include basicresourcetypes::defaultmainstage::defaultmainstage2
+    include basicresourcetypes::mainstage::defaultmainstage1
+    include basicresourcetypes::mainstage::defaultmainstage2
   }
 
 
