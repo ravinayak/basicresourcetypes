@@ -30,7 +30,7 @@ class basicresourcetypes::scheduleresourcetype(
   schedule { 'apply-to-scheduled-random-file':
     name        => 'monday-4am-6am-file-copy',
     period      => 'hourly',
-    repeat      => 4,
+    repeat      => 60,
     range       => $schedule_range,
     weekday     => 'Monday',
     periodmatch => 'distance'
