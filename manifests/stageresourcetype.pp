@@ -6,7 +6,7 @@ class basicresourcetypes::stageresourcetype(
   }
   stage { 'post-stage':}
 
-  Stage['Main'] -> Stage['post-stage']
+  Stage['main'] -> Stage['post-stage']
 
   if $stage_demo {
     Class { 'basicresourcetypes::prestage::prestage1':
