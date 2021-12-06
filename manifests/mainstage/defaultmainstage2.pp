@@ -7,7 +7,9 @@ class basicresourcetypes::mainstage::defaultmainstage2 {
     mode    => '0644',
     content => 'Default-Main-Stage-2',
   }
-  exec { '/bin/ls /tmp':
-    name => 'List-contents-tmp-dir',
+  exec { '/bin/ls':
+    name    => 'List-contents-tmp-dir',
+    path    => '/tmp',
+    command => '/bin/ls',
   }
 }
