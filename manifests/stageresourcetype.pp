@@ -2,10 +2,10 @@ class basicresourcetypes::stageresourcetype(
   $stage_demo=true,
 ) {
   stage { 'pre-stage':
-    before => 'main',
+    before => Stage['main'],
   }
   stage { 'post-stage':
-    before => 'main',
+    before => Stage['main'],
   }
 
   if $::stage_demo {
