@@ -1,4 +1,4 @@
-class basicresourcetypes::prestage::defaultmainstage2 {
+class basicresourcetypes::mainstage::defaultmainstage2 {
     file { 'default-main-stage-2' :
     ensure  => file,
     path    => '/tmp/default-main-stage-2.txt',
