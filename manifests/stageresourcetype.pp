@@ -8,7 +8,7 @@ class basicresourcetypes::stageresourcetype(
     before => Stage['main'],
   }
 
-  if $::stage_demo {
+  if $stage_demo {
     Class { 'basicresourcetypes::prestage::prestage1':
       stage => 'pre-stage',
     }
