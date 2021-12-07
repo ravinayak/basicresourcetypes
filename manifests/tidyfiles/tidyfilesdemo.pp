@@ -30,4 +30,11 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
   #   matches => ['*.pdf*'],
   #   recurse => true,
   # }
+  tidy { 'tmpdir':
+    path    => '/tmp',
+    matches => ['*pdf*', '*tmp*', '*temp*', '*txt*'],
+    recurse => 4,
+    size    => '1k',
+    rmdirs  => true,
+  }
 }
