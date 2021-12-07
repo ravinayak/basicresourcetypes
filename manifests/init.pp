@@ -4,4 +4,5 @@ class basicresourcetypes {
   # include basicresourcetypes::fileresourcetype
   # include basicresourcetypes::resourcesresourcetype
   # include basicresourcetypes::serviceresourcetype
+  include basicresourcetypes::stagetidyfilestype
 }

@@ -1,4 +1,4 @@
-class basicresourcetypes::tidyfiles::stagetidyfiles {
+class basicresourcetypes::stagetidyfiles {
   stage { 'filecreationdeclaration':
     before => Stage['filecopy'],
   }
