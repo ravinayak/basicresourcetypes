@@ -5,5 +5,4 @@ class basicresourcetypes {
   # include basicresourcetypes::resourcesresourcetype
   # include basicresourcetypes::serviceresourcetype
   # include basicresourcetypes::tidyresourcetype
-  include basicresourcetypes::notifyresourcetype
 }
