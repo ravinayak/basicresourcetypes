@@ -11,7 +11,7 @@ class basicresourcetypes::tidyresourcetype {
   Class {'basicresourcetypes::tidyfiles::filecopy':
     stage  => 'filecopy',
   }
-  Class { 'basicresourcetypes::tidyfiles::tidyresourcesdescription':
+  Class { 'basicresourcetypes::tidyfiles::tidyresourcedescription':
     stage => 'main',
   }
 }
