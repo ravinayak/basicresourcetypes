@@ -10,7 +10,7 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     matches   => ['/*tmp*/','/*pdf*/'],
     age       => '1s',
     type      => 'atime',
-    max_files => 15,
+    max_files => 50,
     recurse   => 1,
   }
   tidy { 'tidytmp3-dir':
