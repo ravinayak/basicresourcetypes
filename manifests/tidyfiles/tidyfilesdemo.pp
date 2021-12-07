@@ -1,4 +1,4 @@
-class basicresourcetypes::tidyfiles::tidyfiles{
+class basicresourcetypes::tidyfiles::tidyfilesdemo{
   tidy { 'tidytmp1-dir':
     path    => '/tmp/tidy-tmp-1',
     matches => ['/*tmp*/','/*pdf*/','/*temp*/'],
