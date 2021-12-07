@@ -3,6 +3,9 @@ class basicresourcetypes::tidyfiles::stagetidyfiles {
     before => Stage['filecopy'],
   }
   stage { 'filecopy':
+    before => Stage['filetidy'],
+  }
+  stage { 'filetidy':
     before => Stage['main'],
   }
 }
