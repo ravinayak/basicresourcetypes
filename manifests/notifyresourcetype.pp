@@ -4,6 +4,6 @@ class basicresourcetypes::notifyresourcetype(
   notify{ 'dummy-message' :
     name     => 'dummy-message-notify',
     message  => $message,
-    withpath => true,
+    withpath => false,
   }
 }
