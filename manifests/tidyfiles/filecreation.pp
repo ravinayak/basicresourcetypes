@@ -34,7 +34,7 @@ class basicresourcetypes::tidyfiles::filecreation(
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-      content => 'puppet:///modules/basicresourcetypes/contentdummyfile.txt'
+      source => 'puppet:///modules/basicresourcetypes/contentdummyfile.txt'
     }
     $dir_arr=[ '/tmp/tidy-tmp-1', '/tmp/tidy-tmp-2', '/tmp/tidy-tmp-3', '/tmp/tidy-tmp-4' ]
     $file_creation_hash_arr.each |$element| {
