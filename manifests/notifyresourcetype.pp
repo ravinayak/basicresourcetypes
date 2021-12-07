@@ -7,6 +7,3 @@ class basicresourcetypes::notifyresourcetype(
     withpath => true,
   }
 }
-Class{ 'basicresourcetypes::notifyresourcetype':
-  message => 'This is a notify demo',
-}
