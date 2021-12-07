@@ -1,5 +1,5 @@
 class basicresourcetypes::tidyresourcetype {
-  # include basicresourcetypes::tidyfiles::stagetidyfiles
+  include basicresourcetypes::tidyfiles::stagetidyfiles
   # Class {'basicresourcetypes::tidyfiles::filecreationdeclaration':
   #   stage => 'filecreationdeclaration',
   # }
