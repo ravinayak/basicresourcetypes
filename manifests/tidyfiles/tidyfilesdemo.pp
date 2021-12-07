@@ -27,4 +27,5 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     matches => ['/*pdf*/'],
     recurse => true,
   }
+  notice('I am in class tidyfilesdemo')
 }
