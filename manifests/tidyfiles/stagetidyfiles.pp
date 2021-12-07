@@ -1,11 +1,11 @@
 class basicresourcetypes::tidyfiles::stagetidyfiles {
-  stage { 'filecopy':
+  stage { 'filecreationdeclaration':
     before => Stage['Main'],
   }
-  stage { 'filecreation':
-    before => Stage['filecopy'],
+  ->stage { 'filecreation':
+    before => Stage['Main'],
   }
-  stage { 'filecreationdeclaration':
-    before => Stage['filecreation'],
+  ->stage { 'filecopy':
+    before => Stage['Main'],
   }
 }
