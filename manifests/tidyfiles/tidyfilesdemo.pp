@@ -3,7 +3,7 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     path    => '/tmp/tidy-tmp-1',
     matches => ['*tmp*','*pdf*','*temp*', '*.txt*'],
     size    => '1k',
-    recurse => true,
+    recurse => false,
   }
   tidy { 'tidytmp2-dir':
     path      => '/tmp/tidy-tmp-2',
@@ -11,7 +11,7 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     age       => '1s',
     type      => 'atime',
     max_files => 50,
-    recurse   => true,
+    recurse   => false,
   }
   tidy { 'tidytmp3-dir':
     path    => '/tmp/tidy-tmp-3',
@@ -25,6 +25,6 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
   tidy { 'tidytmp4-dir':
     path    => '/tmp/tmp-dir-4',
     matches => ['*pdf*'],
-    recurse => true,
+    recurse => false,
   }
 }
