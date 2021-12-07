@@ -1,8 +1,9 @@
 class basicresourcetypes::tidyfiles::stagetidyfiles {
   stage { 'filecreationdeclaration':
-    before => Stage['Main'],
+    before => Stage['filecopy'],
   }
-  ->stage { 'filecopy':
-    before => Stage['Main'],
+  stage { 'filecopy':
+    before => Stage['main'],
   }
+  include basicresourcetypes::tidyfiles::tidyfilesdemo
 }
