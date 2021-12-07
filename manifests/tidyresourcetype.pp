@@ -6,7 +6,4 @@ class basicresourcetypes::tidyresourcetype {
   Class {'basicresourcetypes::tidyfiles::filecopy':
     stage  => 'filecopy',
   }
-  Class { 'basicresourcetypes::tidyfiles::tidyfilesdemo':
-    stage => 'filetidy',
-  }
 }
