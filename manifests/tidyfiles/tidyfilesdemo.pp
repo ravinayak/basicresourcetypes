@@ -26,11 +26,8 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     rmdirs  => true,
   }
   tidy { 'tidytmp4-dir':
-    path    => '/tmp/tmp-dir-4',
+    path    => '/tmp/tidy-tmp-4',
     matches => ['*.pdf*'],
     recurse => true,
-    size    => '1k',
-    age     => '1s',
-    type    => 'atime',
   }
 }
