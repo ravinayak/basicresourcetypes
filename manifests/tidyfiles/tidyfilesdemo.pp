@@ -30,5 +30,6 @@ class basicresourcetypes::tidyfiles::tidyfilesdemo{
     path    => '/tmp/tidy-tmp-4',
     matches => ['*.pdf*'],
     recurse => true,
+    notice  => 'hi there !!!'
   }
 }
