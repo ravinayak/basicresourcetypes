@@ -1,5 +1,5 @@
 class basicresourcetypes::fileresourcetype {
-  $path_pl_repo = '/etc/puppetlabs/code/environments/production/puppet-learning/manifests'
+  $path_pl_repo = '/codetestfiles/puppetlabs/code/environments/production/puppet-learning/manifests'
   file {'soure file':
     ensure  => file,
     path    => "${path_pl_repo}/source_file",
@@ -36,7 +36,7 @@ class basicresourcetypes::fileresourcetype {
   # }
   file{'symbolic link example':
     ensure => link,
-    target => '/etc/puppetlabs/code/environments/production/puppet-learning/manifests',
+    target => '/codetestfiles/puppetlabs/code/environments/production/puppet-learning/manifests',
     path   => '/home/vagrant/manifestslink',
     mode   => '0755',
     owner  => 'vagrant',

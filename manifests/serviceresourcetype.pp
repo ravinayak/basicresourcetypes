@@ -29,11 +29,11 @@ class basicresourcetypes::serviceresourcetype(
     name       => 'nginx',
     enable     => true,
     hasrestart => true,
-    #restart    => 'sudo touch /tmp/restart.txt && sudo /etc/init.d/nginx restart',
+    #restart    => 'sudo touch /tmp/restart.txt && sudo /codetestfiles/init.d/nginx restart',
     hasstatus  => true,
-    #status     => 'sudo touch /tmp/status.txt && sudo /etc/init.d/nginx status',
-    # start      => 'sudo touch /tmp/start.txt && sudo /etc/init.d/nginx start',
-    # stop       => 'sudo touch /tmp/stop.txt && sudo /etc/init.d/nginx stop',
+    #status     => 'sudo touch /tmp/status.txt && sudo /codetestfiles/init.d/nginx status',
+    # start      => 'sudo touch /tmp/start.txt && sudo /codetestfiles/init.d/nginx start',
+    # stop       => 'sudo touch /tmp/stop.txt && sudo /codetestfiles/init.d/nginx stop',
     timeout    => 300,
   }
   # Even if hasrestart is true or hasstatus is true, this service seems to use the commands given by status,restart. In any case it is 

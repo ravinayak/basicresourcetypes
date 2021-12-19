@@ -5,7 +5,7 @@ class basicresourcetypes::packageresourcetype(
     exec { 'ls-send-refresh-event':
       command => 'ls',
       path    => ['/usr/bin', '/usr/local/sbin', '/usr/local/bin'],
-      cwd     => '/etc/puppetlabs/code/environments/production/',
+      cwd     => '/codetestfiles/puppetlabs/code/environments/production/',
     }
     package{'tmux':
       ensure               => $ensure_installed,
