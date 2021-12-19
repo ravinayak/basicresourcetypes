@@ -4,7 +4,7 @@ class basicresourcetypes::groupresourcetype(
 ) {
     group { 'group1':
       ensure    => $ensure_val,
-      name      => 'group1-test',
+      #name      => 'group1-test',
       gid       => 1020,
       allowdupe => false,
       #members   => ['tom', 'dick'],
@@ -12,14 +12,14 @@ class basicresourcetypes::groupresourcetype(
     }
     group { 'group2':
       ensure    => $ensure_val,
-      name      => 'group2-test',
+      #name      => 'group2-test',
       gid       => 1021,
       allowdupe => false,
       system    => false,
     }
     group { 'group3':
       ensure    => $ensure_val,
-      name      => 'group3-test',
+      #name      => 'group3-test',
       gid       => 1022,
       allowdupe => false,
       system    => false,
