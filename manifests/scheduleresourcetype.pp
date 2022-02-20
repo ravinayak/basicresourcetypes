@@ -35,7 +35,7 @@ class basicresourcetypes::scheduleresourcetype(
     weekday     => 'Monday',
     periodmatch => 'distance',
   }
-  exec { '/usr/bin/ls /codetestfiles/puppetlabs/code/environments/production/puppet-learning/':
+  exec { '/usr/bin/ls /opt/puppetlabs/code/environments/production/puppet-learning/':
     schedule => 'hourly-60-times-schedule',
   }
 
